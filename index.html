@@ -316,11 +316,12 @@
           </div>
         </div>
         <div class="content-center" id="contentCenter">
-          Welcome To Spectra
+          Welcome To Spectra.
           <div class="subtitle">Your advanced, animated, and beautiful dashboard</div>
         </div>
         <footer class="footer">
           <span>Creator: <b>@mtuq</b></span>
+          <span>Dev & Engineer: <b>@dominusnyx</b></span>
           <span class="version">v2.2.0</span>
         </footer>
       </main>
@@ -354,7 +355,7 @@
         });
       });
 
-      // Search bar animation
+      //  bar animation
       const searchInput = document.getElementById('searchInput');
       const searchIcon = document.getElementById('searchIcon');
       searchIcon.addEventListener('click', () => {
@@ -377,22 +378,3 @@
     </script>
   </body>
   </html>
-  `;
-
-  const win = new BrowserWindow({
-    width: 1200,
-    height: 700,
-    minWidth: 900,
-    minHeight: 600,
-    webPreferences: {
-      nodeIntegration: false,
-      contextIsolation: true
-    },
-    title: "Spectra"
-  });
-
-  win.setMenuBarVisibility(false);
-  win.loadURL('data:text/html;charset=UTF-8,' + encodeURIComponent(html));
-}
-
-app.whenReady().then(createWindow);
